@@ -1,0 +1,36 @@
+\frametitle{Virtual Machine: Global Frame and Call stack}
+\only<1>{
+        {\footnotesize \textsc{IMPLEMENTED}}
+        \begin{itemize}
+            \item A global frame.
+            \item A call stack.
+            \item A shared value stack.
+            \item A constant pool.
+        \end{itemize}
+    }
+    \begin{onlyenv}<2>
+        \begin{figure}[H]
+	        \centering
+            \begin{subtable}{0.3\textwidth}
+                \begin{minted}[linenos]{cpp}
+print [1, 2, 3]
+a: int = 3
+print [1, 2, a]
+                \end{minted}
+		    \caption{Input program}
+	        \end{subtable}
+	        \begin{subtable}{0.6\textwidth}
+                \begin{minted}{cpp}
+PRINT_C C-00000
+LOAD_C  R-00000 C-00001
+LOAD_C  R-00001 C-00002
+LPUSH_C R-00001 C-00003
+LPUSH_C R-00001 C-00004
+LPUSH   R-00001 R-00000
+PRINT   R-00001
+                \end{minted}
+            \caption{Optimized bytecode generated}
+	        \end{subtable}
+        \caption{Optimized register allocation of a program}
+        \end{figure}
+    \end{onlyenv}

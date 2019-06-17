@@ -1,0 +1,78 @@
+\begin{frame}[fragile]{Code Generator Optimizations: Register Allocation}
+    \only<1>{
+        {\footnotesize \textsc{PROBLEM}}
+        \begin{itemize}
+            \item How long is the value of a register needed?
+            \item Can we re-use the registers?
+        \end{itemize}
+        {\footnotesize \textsc{IMPLEMENTED}}
+        \begin{itemize}
+            \item Linear scan register allocation.
+        \end{itemize}
+        {\footnotesize \textsc{IMPROVEMENT}}
+        \begin{itemize}
+            \item Significant memory reduction.
+        \end{itemize}
+    }
+    \begin{onlyenv}<2>
+        \begin{figure}[H]
+	        \centering
+            \begin{subtable}{0.3\textwidth}
+                \begin{minted}[linenos]{cpp}
+a: int = 10
+b: int = 20
+print a + b
+c: int = a
+print c
+                \end{minted}
+		    \caption{Input program}
+	        \end{subtable}
+	        \begin{subtable}{0.6\textwidth}
+                \begin{tikzpicture}
+                    \draw[thick, ->] (0,0) -- (5,0) node[anchor=north] {\emph{Line}};
+                    \draw[thick] (0,0) -- (0,4) node[anchor=east] {\emph{Variable}};
+                    \node[anchor=east] at (0, 3) {a};
+                    \node[anchor=east] at (0, 2) {b};
+                    \node[anchor=east] at (0, 1) {c};
+                    \draw[dashed, *-*] (-0.075, 3) -- (3.075, 3);
+                    \draw[dashed, *-*] (0.925, 2) -- (2.075, 2);
+                    \draw[dashed, *-*] (2.925, 1) -- (4.075, 1);
+                    \node[anchor=north] at (4, 0) {5};
+                    \node[anchor=north] at (3, 0) {4};
+                    \node[anchor=north] at (2, 0) {3};
+                    \node[anchor=north] at (1, 0) {2};
+                    \node[anchor=north] at (0, 0) {1};
+                \end{tikzpicture}
+            \caption{Variable lifetime}
+	        \end{subtable}
+        \caption{Variable lifetime of a program}
+        \end{figure}
+    \end{onlyenv}
+    \begin{onlyenv}<3>
+        \begin{figure}[H]
+	        \centering
+            \begin{subtable}{0.3\textwidth}
+                \begin{minted}[linenos]{cpp}
+a: int = 10
+b: int = 20
+print a + b
+c: int = a
+print c
+                \end{minted}
+		    \caption{Input program}
+	        \end{subtable}
+	        \begin{subtable}{0.6\textwidth}
+                \begin{minted}{cpp}
+LOAD_C  R-00000 C-00000
+LOAD_C  R-00001 C-00001
+ADD_INT R-00001 R-00000 R-00001
+PRINT   R-00001
+MOVE    R-00001 R-00000
+PRINT   R-00001
+                \end{minted}
+            \caption{Optimized bytecode generated}
+	        \end{subtable}
+        \caption{Register allocation optimization of a program}
+        \end{figure}
+    \end{onlyenv}
+\end{frame}

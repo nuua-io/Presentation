@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{PRINT\PYGZus{}C} \PYG{n}{C}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00000}
+\PYG{n}{LOAD\PYGZus{}C}  \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00000} \PYG{n}{C}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001}
+\PYG{n}{LOAD\PYGZus{}C}  \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001} \PYG{n}{C}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00002}
+\PYG{n}{LPUSH\PYGZus{}C} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001} \PYG{n}{C}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00003}
+\PYG{n}{LPUSH\PYGZus{}C} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001} \PYG{n}{C}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00004}
+\PYG{n}{LPUSH}   \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00000}
+\PYG{n}{PRINT}   \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001}
+\end{Verbatim}

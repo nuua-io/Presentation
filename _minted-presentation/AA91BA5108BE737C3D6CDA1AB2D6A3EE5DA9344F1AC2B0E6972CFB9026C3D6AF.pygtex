@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{LOAD\PYGZus{}C}  \PYG{n}{R0} \PYG{n}{C0}
+\PYG{n}{LOAD\PYGZus{}C}  \PYG{n}{R1} \PYG{n}{C1}
+\PYG{n}{ADD\PYGZus{}INT} \PYG{n}{R1} \PYG{n}{R0} \PYG{n}{R1}
+\PYG{n}{PRINT}   \PYG{n}{R1}
+\PYG{n}{MOVE}    \PYG{n}{R1} \PYG{n}{R0}
+\PYG{n}{PRINT}   \PYG{n}{R1}
+\end{Verbatim}

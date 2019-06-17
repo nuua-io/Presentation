@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k+kn}{as} \PYG{n+nn}{np}
+
+    \PYG{k}{def} \PYG{n+nf}{incmatrix}\PYG{p}{(}\PYG{n}{genl1}\PYG{p}{,}\PYG{n}{genl2}\PYG{p}{):}
+        \PYG{n}{m} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{genl1}\PYG{p}{)}
+        \PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{genl2}\PYG{p}{)}
+\end{Verbatim}

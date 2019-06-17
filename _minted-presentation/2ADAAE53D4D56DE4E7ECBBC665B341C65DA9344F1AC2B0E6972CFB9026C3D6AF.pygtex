@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nl}{a}\PYG{p}{:} \PYG{k+kt}{int} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n+nl}{b}\PYG{p}{:} \PYG{k+kt}{int} \PYG{o}{=} \PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{10}
+\PYG{n}{print} \PYG{n}{a} \PYG{o}{/} \PYG{n}{b}
+\end{Verbatim}
