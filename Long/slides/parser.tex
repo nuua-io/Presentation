@@ -1,0 +1,32 @@
+\begin{slide}
+    \begin{block}{Syntactic Analysis}
+        Transform the list of tokens returned by the Lexer into an abstract syntax tree.
+    \end{block}
+    \vfill
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            [node distance=1cm]
+            \node[block] (input) {List of tokens};
+            \node[block,right=of input] (parser) {Parser};
+            \node[block,right=of lexer] (output) {Abstract syntax tree};
+            \draw[line] (input) -- (parser);
+            \draw[line] (parser) -- (output);
+        \end{tikzpicture}
+        \caption{Parser overview}
+    \end{figure}
+\end{slide}
+\begin{slide}
+    \slidecaps{MUST BE}
+    \begin{itemize}
+        \item Controlable (for error reporting).
+        \item Easy to build.
+        \item Fast enough.
+        \item Handwritten (no generators).
+    \end{itemize}
+    \slidecaps{CANDIDATES}
+    \begin{itemize}
+        \item Recursive descend parser.
+        \item Pratt parser.
+    \end{itemize}
+\end{slide}

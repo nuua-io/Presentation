@@ -1,0 +1,52 @@
+\begin{slide}
+    \slidecaps{PROBLEM}
+    \begin{itemize}
+        \item Runtime exceptions require the source file information.
+        \item Requires the file name, the line and the column.
+        \item Each opcode require this information because it can fail.
+        \item Very memory inefficient.
+    \end{itemize}
+    \slidecaps{SOLUTION}
+    \begin{itemize}
+        \item Register only the changes on the file, line or column.
+        \item Guess the file, line and column based on the current opcode.
+    \end{itemize}
+\end{slide}
+\begin{slide}
+    \begin{figure}[H]
+        \centering
+        \begin{subtable}{0.3\textwidth}
+            \begin{minted}[linenos]{cpp}
+a: int = 10
+b: int = a - 10
+print a / b
+            \end{minted}
+        \caption{Input program}
+        \end{subtable}
+        \begin{subtable}{0.6\textwidth}
+            \begin{minted}{cpp}
+LOAD_C  R-00001 C-00000
+LOAD_C  R-00003 C-00001
+SUB_INT R-00002 R-00001 R-00003
+DIV_INT R-00003 R-00001 R-00002
+PRINT   R-00003
+            \end{minted}
+        \caption{Bytecode generated}
+        \end{subtable}
+        \begin{subtable}{0.3\textwidth}
+            {\footnotesize \textsc{CONDITION}}\\
+            Highest index that is lower or equal to the crash index.
+        \end{subtable}
+        \begin{subtable}{0.6\textwidth}
+            \centering
+            \begin{tabular}{ l l }
+                \textbf{Opcode Index} & \textbf{Line number} \\
+                0 & 1 \\
+                3 & 2 \\
+                10 & 3 \\
+            \end{tabular}
+        \caption{Registered line changes}
+        \end{subtable}
+    \caption{Runtime exception}
+    \end{figure}
+\end{slide}

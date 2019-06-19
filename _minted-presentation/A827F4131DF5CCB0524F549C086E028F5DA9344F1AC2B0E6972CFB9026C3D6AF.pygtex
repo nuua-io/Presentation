@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{LOAD\PYGZus{}C}  \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00000} \PYG{n}{C}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00000}
-\PYG{n}{LOAD\PYGZus{}C}  \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00002} \PYG{n}{C}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001}
-\PYG{n}{SUB\PYGZus{}INT} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00000} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00002}
-\PYG{n}{DIV\PYGZus{}INT} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00000} \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001}
-\PYG{n}{PRINT}   \PYG{n}{R}\PYG{o}{\PYGZhy{}}\PYG{l+m+mo}{00001}
-\end{Verbatim}

@@ -1,0 +1,29 @@
+\begin{slide}
+    \begin{block}{Code Generator}
+        Transforms the AST into bytecode instructions ready to be executed by the virtual machine.
+    \end{block}
+    \vfill
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            [node distance=1cm]
+            \node[block] (input) {Abstract syntax tree};
+            \node[block,right=of input] (codegen) {Code generator};
+            \node[block,right=of lexer] (output) {List of opcodes};
+            \draw[line] (input) -- (codegen);
+            \draw[line] (codegen) -- (output);
+        \end{tikzpicture}
+        \caption{Code generator overview}
+    \end{figure}
+\end{slide}
+\begin{slide}
+    \slidecaps{IMPLEMENTED}
+    \begin{itemize}
+        \item Bytecode instructions similar to hardware instructions.
+        \item 113 register-based instructions.
+        \item Constant pool and globals creation.
+        \item Frame sizes (registers needed).
+        \item Optimizations
+        \item Position independent functions.
+    \end{itemize}
+\end{slide}

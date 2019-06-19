@@ -1,0 +1,53 @@
+\input{configuration}
+
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}<beamer>{Table of Contents}
+    \begin{small}
+    \tableofcontents[
+        subsectionstyle=hide,
+    ]
+    \end{small}
+\end{frame}
+\section{Introduction}
+\subsection{Objectives}
+\input{slides/objectives}
+\subsection{System Architecture}
+\input{slides/arch}
+\subsection{The Nuua Programming Language}
+\input{slides/nuua}
+\subsection{Error Logging}
+\input{slides/errors}
+\section{Lexical Analysis}
+\subsection{Scanning the Source File}
+\input{slides/scanning}
+\section{Syntactic Analysis}
+\subsection{Technique}
+\input{slides/parser}
+\subsection{Abstract Syntax Tree}
+\input{slides/ast}
+\section{Semantic Analysis}
+\subsection{Safety Checks}
+\input{slides/safety}
+\section{Code Generation}
+\subsection{Instructions}
+\input{slides/instructions}
+\section{Optimizations}
+\subsection{Constant Folding}
+\input{slides/constfold}
+\subsection{Register allocation}
+\input{slides/regalloc}
+\section{Virtual Machine}
+\subsection{Value Stack and Call stack}
+\input{slides/stacks}
+\section{Application}
+\subsection{Job}
+\input{slides/app}
+\section{Conclusions}
+\subsection{General Objectives}
+\input{slides/conclusions}
+\subsection{Curiosities}
+\input{slides/curiosities}
+
+\end{document}

@@ -1,0 +1,37 @@
+\begin{slide}
+    \begin{block}{Semantic Analysis}
+        Append information to the AST and perform checks to ensure it's a valid program.
+        If this checks succeed, the program is considered valid.
+    \end{block}
+    \vfill
+    \slidecaps{IMPLEMENTED}
+    \begin{itemize}
+        \item Creation of the symbol table for each module and block scope.
+        \item Expression type inference.
+        \item Static type checking.
+        \item Node information attachment.
+    \end{itemize}
+\end{slide}
+\begin{slide}
+    \slidecaps{ADDITIONAL CHECKS}
+    \vspace{0.5em}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Variable declaration.
+                \item Function return value match.
+                \item Valueless return types.
+                \item Argument type match.
+                \item Assignment type match.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Iterator index type.
+                \item Variable lifetime.
+                \item Iterator check on required nodes.
+                \item \texttt{main([string])} required on the main module.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{slide}

@@ -1,0 +1,37 @@
+\begin{slide}
+    \begin{block}{What is Nuua?}
+        Nuua is a general-purpose high level programming language with an imperative paradigm and a statically typed system.
+    \end{block}
+    \vfill
+    \begin{minted}{cpp}
+fun main(argv: [string]) {
+    print "Hello, World"
+}
+    \end{minted}
+\end{slide}
+\begin{slide}
+    \begin{minted}{cpp}
+class Triangle {
+    b: float
+    h: float
+    fun area(): float -> (self.b * self.h) / 2.0
+}
+
+fun main(argv: [string]) {
+    t := Triangle!{b: 10.0, h: 5.0}
+    print "The area is: " + t.area() as string
+}
+    \end{minted}
+\end{slide}
+\begin{slide}
+    \begin{minted}{cpp}
+fun rec_fib(n: int): int {
+    if n < 2 => return n
+    return rec_fib(n - 2) + rec_fib(n - 1)
+}
+
+fun main(argv: [string]) {
+    print rec_fib(25)
+}
+    \end{minted}
+\end{slide}

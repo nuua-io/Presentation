@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{use} \PYG{n}{list\PYGZus{}int\PYGZus{}map} \PYG{n}{from} \PYG{l+s}{\PYGZdq{}list\PYGZdq{}}
+
+\PYG{k}{class} \PYG{n+nc}{Collection} \PYG{p}{\PYGZob{}}
+    \PYG{n+nl}{n}\PYG{p}{:} \PYG{p}{[}\PYG{k+kt}{int}\PYG{p}{]}
+    \PYG{n}{fun} \PYG{n}{map}\PYG{p}{(}\PYG{n+nl}{f}\PYG{p}{:} \PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{int}\PYG{p}{))} \PYG{o}{=\PYGZgt{}} \PYG{n}{list\PYGZus{}int\PYGZus{}map}\PYG{p}{(}\PYG{n}{self}\PYG{p}{.}\PYG{n}{n}\PYG{p}{,} \PYG{n}{f}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{fun} \PYG{n}{multiply}\PYG{p}{(}\PYG{n+nl}{n}\PYG{p}{:} \PYG{k+kt}{int}\PYG{p}{)}\PYG{o}{:} \PYG{k+kt}{int} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{n} \PYG{o}{*} \PYG{l+m+mi}{2}
+
+\PYG{n}{fun} \PYG{n}{main}\PYG{p}{(}\PYG{n+nl}{argv}\PYG{p}{:} \PYG{p}{[}\PYG{n}{string}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+    \PYG{n+nl}{c} \PYG{p}{:}\PYG{o}{=} \PYG{n}{Collection}\PYG{o}{!}\PYG{p}{\PYGZob{}}\PYG{n+nl}{n}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{]\PYGZcb{}}
+    \PYG{n}{c}\PYG{p}{.}\PYG{n}{map}\PYG{p}{(}\PYG{n}{multiply}\PYG{p}{)}
+    \PYG{n}{print} \PYG{n}{c}\PYG{p}{.}\PYG{n}{n}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

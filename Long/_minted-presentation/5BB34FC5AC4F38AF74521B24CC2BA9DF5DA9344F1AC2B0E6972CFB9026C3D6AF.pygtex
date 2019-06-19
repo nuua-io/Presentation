@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class} \PYG{n+nc}{Triangle} \PYG{p}{\PYGZob{}}
+    \PYG{n+nl}{b}\PYG{p}{:} \PYG{k+kt}{float}
+    \PYG{n+nl}{h}\PYG{p}{:} \PYG{k+kt}{float}
+    \PYG{n}{fun} \PYG{n}{area}\PYG{p}{()}\PYG{o}{:} \PYG{k+kt}{float} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{p}{(}\PYG{n}{self}\PYG{p}{.}\PYG{n}{b} \PYG{o}{*} \PYG{n}{self}\PYG{p}{.}\PYG{n}{h}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mf}{2.0}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{fun} \PYG{n}{main}\PYG{p}{(}\PYG{n+nl}{argv}\PYG{p}{:} \PYG{p}{[}\PYG{n}{string}\PYG{p}{])} \PYG{p}{\PYGZob{}}
+    \PYG{n+nl}{t} \PYG{p}{:}\PYG{o}{=} \PYG{n}{Triangle}\PYG{o}{!}\PYG{p}{\PYGZob{}}\PYG{n+nl}{b}\PYG{p}{:} \PYG{l+m+mf}{10.0}\PYG{p}{,} \PYG{n+nl}{h}\PYG{p}{:} \PYG{l+m+mf}{5.0}\PYG{p}{\PYGZcb{}}
+    \PYG{n}{print} \PYG{l+s}{\PYGZdq{}The area is: \PYGZdq{}} \PYG{o}{+} \PYG{n}{t}\PYG{p}{.}\PYG{n}{area}\PYG{p}{()} \PYG{n}{as} \PYG{n}{string}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
